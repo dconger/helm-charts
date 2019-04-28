@@ -22,6 +22,10 @@ data:
     node.name: ${HOSTNAME}
 
     network.host: 0.0.0.0
+    http.cors.enabled: true
+    http.cors.allow-origin: "https://frosty-visvesvaraya-adb8ed.netlify.com"
+    http.cors.allow-methods: OPTIONS, HEAD, GET, POST, PUT, DELETE
+    http.cors.allow-headers: "X-Requested-With, Content-Type, Content-Length, X-User"
 
 {{- if hasPrefix "2." .Values.appVersion }}
     # see https://github.com/kubernetes/kubernetes/issues/3595
